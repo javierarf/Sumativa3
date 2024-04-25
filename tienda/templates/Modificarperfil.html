@@ -1,0 +1,78 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modificar Perfil</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Modificar Perfil</h2>
+
+        <!-- Formulario de búsqueda -->
+        <form method="POST" class="search-form">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="btn btn-primary">Buscar Usuario</button>
+            {% if form.errors %}
+                <div class="alert alert-danger mt-2">
+                    {{ form.errors }}
+                </div>
+            {% endif %}
+        </form>
+
+        <!-- Formulario de modificación -->
+        {% if usuario %}
+        <form method="POST" action="{% url 'guardar_cambios' %}">
+            {% csrf_token %}
+            {{ form_modificacion.as_p }}  
+            <button type="submit">Guardar Cambios</button>
+            <p>Para aceptar el nuevo nombre de usuario, escriba nuevamente su contraseña</p>
+            
+            {% if form_modificacion.errors %}
+                <div class="alert alert-danger mt-2">
+                    {{ form_modificacion.errors }}
+                </div>
+            {% endif %}
+        </form>
+        {% endif %}
+    </div>
+</body>
+</html>

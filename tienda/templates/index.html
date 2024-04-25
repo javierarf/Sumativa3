@@ -1,0 +1,215 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progra-Consolas</title>
+    <link rel="stylesheet" href="{% static 'css/estilo.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+
+    
+</head>
+<body>
+    
+  <nav class="navbar navbar-expand-lg"  id="navbar">
+    <div class="container-fluid">
+        <div class="col-4" id="logo">
+            <a href="{% url 'index' %}"><img src="{% static 'images/img1.png' %}" alt="" width="60" height="60"></a>
+        </div>
+        <a class="navbar-brand" href="{% url 'index' %}">Inicio</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'PlayStation' %}">PlayStation</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'Nintendo' %}">Nintendo</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'Microsoft' %}">Microsoft</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'Todos' %}">Todos</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'Iniciar_Sesion' %}">Cerrar Sesion</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+  <div id="carouselExampleIndicators" class="carousel slide">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <p> <h3 style="text-align: center;">¡ Nueva Xbox Serie X !</h3></p>
+        <img src="{% static 'images/XboxSerieX.png' %}" class="d-block" style="max-width: 534px; height: auto; display: inline-block; vertical-align: top;" alt="slide-1" >
+      </div>
+      <div class="carousel-item">
+        <p> <h3 style="text-align: center;">¡ Nueva PlayStation 5 !</h3></p>
+        <img src="{% static 'images/consolaPS5.png' %}" class="d-block" style="max-width: 303px; height: auto; display: inline-block; vertical-align: top;" alt="slide-2">
+      </div>
+      <div class="carousel-item">
+        <p><h3 style="text-align: center;">¡ Nueva Nintendo Swicht Oled !</h3></p>
+        <img src="{% static 'images/NintendoSwichtConsola.png' %}" class="d-block" style="max-width: 400px; height: auto;" alt="slide-3">
+      </div>
+    </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+  </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
+
+  <header class="header">
+        <div class="header-content container mt-4" >
+          <div class="header-txt">
+              <span>Bienvenidos a nuestra tienda!</span>
+              <h1>Nuestras Marcas:</h1>
+              <div class="row">
+                <div class="col-8 mt-3"> 
+                  <h2>Sony PlayStation</h2>
+                  <p>
+                    <h3>  
+                      PlayStation es el nombre de una serie de consolas de videojuegos creadas y desarrolladas por Sony Interactive Entertainment.                         
+                      Han estado presentes en la quinta, sexta, séptima, octava y novena generación de videoconsolas; 
+                      la compañía promotora está actualmente en el mercado con su PlayStation 5.
+                    </h3>
+                  </p>
+                </div>
+                <div class="logoPlaystation col-2 mt-5">
+                  <img src="{% static 'images/PlayStationLogo.png' %}"  alt="Logo de Sony PlayStation" class="img-fluid" style="float: left; margin-left: 100px;">
+                </div>
+              </div>
+          </div>
+            <div class="consolaPlayStationImg col-4">
+              <img src="{% static 'images/consolaPS5.png' %}" class="img-fluid" alt="Imagen Ps5" ></a>
+            </div>
+            <div class="row">
+              <div class="col-8 mt-3"> 
+                <h2>Nintendo Company</h2>
+                <p>
+                  <h3>
+                    Nintendo Company, Ltd.es una empresa de entretenimiento dedicada a la investigación, 
+                    desarrollo y distribución de software y hardware de videojuegos, y juegos de cartas, con sede en Kioto, Japón.
+                    Sus productos incluyen algunas de las consolas y títulos más influyentes y exitosos en la industria de los videojuegos, 
+                    como la Nintendo Entertainment System, la Super Nintendo Entertainment System, la Wii y la Game Boy; así como los juegos Donkey Kong (1981), 
+                    Super Mario Bros. (1985), The Legend of Zelda (1986), Metroid (1986), Fire Emblem (1990), Star Fox (1993) y Pokémon Red y Blue (1996), 
+                    que dieron origen a sus correspondientes franquicias.
+                  </h3>
+                </p>
+              </div>
+                <div class="logoNintendo col-3 mt-5">
+                  <img src="{% static 'images/NintendoLogo.png' %}" alt="Logo de Sony PlayStation" class="img-fluid" style="float: left; margin-left: 100px; margin-top:90px;">
+                </div>
+            </div>
+            <div class="consolaNintendoSwicht col-6">
+              <img src="{% static 'images/NintendoSwichtConsola.png' %}" class="img-fluid" alt="Imagen Nintendo Swicht"></a>
+            </div>
+            <div class="row">
+              <div class="col-8 mt-3"> 
+                <h2>Microsoft</h2>
+                <p>
+                  <h3>
+                    Xbox es una marca de videojuegos creada por y propiedad de Microsoft que incluye una serie de videoconsolas desarrolladas por la misma compañía, 
+                    de sexta a novena generación, así como aplicaciones (juegos), servicios de streaming y el servicio en línea Xbox Live. La marca fue introducida 
+                    por primera vez el 8 de noviembre de 2001 en los Estados Unidos, con el lanzamiento de la consola Xbox.
+                    El 10 de noviembre de 2020 Microsoft lanza sus más recientes consolas, la Xbox Series X/S, que ha vendido más de 16 millones de consolas hasta la fecha.
+                  </h3>
+                </p>
+              </div>
+              <div class="logoXbox col-3 mt-5">
+                <img src="{% static 'images/XboxLogo.png' %}" alt="Logo de Sony PlayStation" class="img-fluid" style="float: left; margin-left: 100px; margin-top:90px;">
+              </div>
+            </div>
+            <div class="consolaXbox col-6">
+              <img src="{% static 'images/XboxSerieX.png' %}" class="img-fluid" alt="Imagen Nintendo Swicht"></a>
+            </div>
+        </div>
+  </header>
+</body>
+</html>
+
+
+<style>
+
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap");
+
+#logo{
+    text-align: center;
+    color: black;
+}
+
+#navbar{
+    background-color: rgb(2, 129, 112);
+}
+
+.carousel-item img{
+    display: block;
+    margin: auto;
+    width: 100%; 
+    height: auto;
+    object-fit: cover;
+}
+
+.container1{
+text-align: left;
+}
+.container2{
+    text-align: center;
+}
+.container3{
+ text-align: right;   
+}
+.align-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+  .carousel-item{
+    background-color: #000000a9 ;
+    width: 100%; 
+    height: auto;
+    object-fit: cover;
+  }
+  
+  .container-product{
+    background-color: black;
+  }
+  .imagenes{
+    background-color: rgba(0, 0, 0, 0.541);
+  }
+  .align-middle {
+    display: flex;
+    align-items: center;
+  }
+  .container-imagen{
+    background-color: rgba(0, 0, 0, 0.226);
+  }
+  .nav-item{
+    font-size: 1.5rem;
+  }
+
+</style>
+
+
+
+
+
+
+        

@@ -22,8 +22,20 @@
             color : #fff;
         }
 
-        #btn-iniciar{
+        #a {
+            display: inline-block;
+            padding: 10px 20px;
             background-color: #b58900;
+            color: #ffffff;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 16px;
+            margin-right: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        #a:hover {
+            background-color: #947103;
         }
     </style>
 </head>
@@ -52,15 +64,15 @@
                     <form class="mt-4" action="" method="post">
                         {% csrf_token %}
                         {{ formLog.as_p }}
-                        <button type="submit" class="btn btn-block mt-3 p-3" id="btn-iniciar">Ingresar</button>
+                        <button type="submit" class="btn btn-block mt-3 p-3" id="a">Ingresar</button>
                     </form>
                     <div class="text-center mt-3">
                         ¿No tienes una cuenta? 
-                        <a href="{% url 'Registro' %}" class="btn btn-block" id="btn-iniciar">Regístrate aquí</a>
+                        <a href="{% url 'Registro' %}" class="btn btn-block" id="a">Regístrate aquí</a>
                     </div>
                     <div class="text-center mt-3">
                         ¿Olvidaste tu contraseña? 
-                        <a href="{% url 'recuperar_contraseña' %}" class="btn btn-block" id="btn-iniciar">Recuperar Contraseña</a>
+                        <a href="{% url 'recuperar_contraseña' %}" class="btn btn-block" id="a">Recuperar Contraseña</a>
                     </div>
                 </div>
             </div>

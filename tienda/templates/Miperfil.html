@@ -5,20 +5,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Perfil</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/estilo.css' %}">
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: #073642;
         }
         .container {
             max-width: 800px;
             margin: 0 auto;
             padding: 20px;
-            background-color: #fff;
+            background-color: #208170;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            color: #ffffff;
         }
         h1 {
             text-align: center;
@@ -56,10 +59,14 @@
         button:hover {
             background-color: #0056b3;
         }
+        .btn-eliminar{
+            background-color: #dc3545;
+            color: #ffffff;
+        }
     </style>
 </head>
 <body>
-    <div class="container">
+    <div class="container mt-3">
         <h1>Mi Perfil</h1>
         {% if perfil_usuario %}
             <div class="profile-info">
@@ -73,8 +80,8 @@
             <div class="text-center mt-4">
                 <button onclick="window.location.href=url_modificar_perfil" class="btn btn-primary btn-block mb-2">Cambiar nombre de Usuario</button>
                 <button onclick="window.location.href=url_modificar_contraseña" class="btn btn-secondary btn-block mb-2">Cambiar contraseña</button>
-                <button onclick="window.location.href=url_eliminar_perfil" class="btn btn-danger btn-block">Eliminar Cuenta</button>
-                <button onclick="window.location.href=url_pagina_web" class="btn btn-success">Ir a pagina web</button>
+                <button onclick="window.location.href=url_eliminar_perfil" class="btn btn-eliminar btn-block mb-2">Eliminar Cuenta</button>
+                <button onclick="window.location.href=url_pagina_web" class="btn btn-success mb-2">Ir a pagina web</button>
             </div>
         {% else %}
             <p>No se encontró información del usuario.</p>

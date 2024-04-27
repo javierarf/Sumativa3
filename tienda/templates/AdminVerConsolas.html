@@ -6,37 +6,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ver Consolas</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/estilo.css' %}">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            padding: 20px;
-        }
-
         h1 {
             text-align: center;
             margin-bottom: 30px;
-        }
-
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        li {
-            background-color: #ffffff;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px;
-            padding: 20px;
-        }
-
-        h2 {
-            margin-top: 0;
-        }
-
-        p {
-            margin-bottom: 10px;
         }
 
         img {
@@ -67,7 +42,7 @@
         a {
             display: inline-block;
             padding: 10px 20px;
-            background-color: #007bff;
+            background-color: #b58900;
             color: #ffffff;
             border-radius: 4px;
             text-decoration: none;
@@ -77,34 +52,152 @@
         }
 
         a:hover {
-            background-color: #0056b3;
+            background-color: #947103;
         }
-    </style>
+
+        .logout-btn {
+            margin-left: auto; /* Mueve el botón hacia la derecha */
+        }
+
+        .logout-btn a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #dc3545;
+            color: #ffffff;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+            margin: 10px;
+        }
+
+        .logout-btn a:hover {
+            background-color: #c82333;
+        }
+        #logo{
+            background-color:  #208170;
+        }
+
+        .consola-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.consola-item {
+    background-color: #208170;
+    color:#ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.consola-header h2 {
+    margin-top: 0;
+}
+
+.modelo, .especificaciones, .caracteristicas, .marca {
+    margin: 5px 0;
+}
+
+.consola-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.consola-image img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.consola-buttons {
+    display: flex;
+    align-items: center;
+}
+
+.btn-delete {
+    padding: 10px 20px;
+    background-color: #dc3545;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-right: 10px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-edit {
+    padding: 10px 20px;
+    background-color: #b58900;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-right: 10px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-delete:hover, .btn-edit:hover {
+    background-color: #c82333;
+}
+
+.no-consolas {
+    margin-top: 20px;
+    text-align: center;
+    color: #888;
+}
+    </style> 
 </head>
 <body>
-    <h1>Consolas Registradas</h1>
+    <nav class="navbar navbar-expand-lg"  id="navbar"> 
+        <div class="container-fluid" id="logo">
+            <a class="navbar-brand" id="logo" href="{% url 'index' %}">
+                <img src="{% static 'images/img1.png' %}" alt="" width="30" height="30" class="d-inline-block align-top">
+            </a>
+        
+            <div class="logout-btn">
+                <a href="{% url 'Iniciar_Sesion' %}">Cerrar Sesion</a>
+            </div></div>
+    </nav>
+    <h1 class="mt-3">Consolas Registradas</h1>
 
-    <ul>
+    <ul class="consola-list">
         {% for consola in consolas %}
-        <li>
-            <h2>{{ consola.nombre_consola }}</h2>
-            <p>Modelo: {{ consola.modelo }}</p>
-            <p>Especificaciones: {{ consola.especificaciones }}</p>
-            <p>Características: {{ consola.caracteristicas }}</p>
-            <p>Marca: {{ consola.marca.Nombre_Marca }}</p>
-            {% if consola.imagen %}
-            <img src="{{ consola.imagen.url }}" alt="{{ consola.nombre_consola }}" width="200">
-            {% endif %}
-
-            <!-- Formulario para Borrar Consola -->
-            <form method="post" action="{% url 'borrar_consola' consola.id %}">
-                {% csrf_token %}
-                <button type="submit">Borrar Consola</button>
-                <a href="{% url 'editar_consola' consola.id %}">Editar</a>
-            </form>
+        <li class="consola-item">
+            <div class="consola-header">
+                <h2>{{ consola.nombre_consola }}</h2>
+                <p class="modelo">Modelo: {{ consola.modelo }}</p>
+                <p class="especificaciones">Especificaciones: {{ consola.especificaciones }}</p>
+                <p class="caracteristicas">Características: {{ consola.caracteristicas }}</p>
+                <p class="marca">Marca: {{ consola.marca.Nombre_Marca }}</p>
+            </div>
+            <div class="consola-actions">
+                {% if consola.imagen %}
+                <div class="consola-image">
+                    <img src="{{ consola.imagen.url }}" alt="{{ consola.nombre_consola }}" width="200">
+                </div>
+                {% endif %}
+                <!-- Formulario para Borrar y Editar Consola -->
+                <div class="consola-buttons">
+                    <form method="post" action="{% url 'borrar_consola' consola.id %}">
+                        {% csrf_token %}
+                        <button type="submit" class="btn-delete">Borrar Consola</button>
+                    </form>
+                    <a href="{% url 'editar_consola' consola.id %}" class="btn-edit">Editar</a>
+                </div>
+            </div>
         </li>
         {% empty %}
-        <li>No hay consolas registradas.</li>
+        <li class="no-consolas">No hay consolas registradas.</li>
         {% endfor %}
     </ul>
 

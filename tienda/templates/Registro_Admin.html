@@ -11,12 +11,50 @@
     <title>Registrate</title>
     <style>
         body {
-            background-color: rgb(2, 129, 112);
+            background-color: #073642;
+        }
+        .navbar{
+            background-color:#208170;
+        }
+        form {
+            background-color: #208170;
+            max-width: 500px;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-label{
+            color: #ffffff;
+        }
+        .label{
+            color: #ffffff;
+        }
+        button {
+            padding: 10px 20px;
+            background-color:  #b58900;
+            color: #ffffff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-right: 10px;
+        }
+
+        button:hover {
+            background-color: #c82333;
+        }
+        a{
+            color: #dbdcdd;
         }
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg" id="navbar">
+    <nav class="navbar navbar-expand-lg mb-3" id="navbar">
         <div class="container-fluid">
             <div class="col-4" id="logo">
                 <a href="{% url 'index' %}"><img src="{% static 'images/img1.png' %}" alt="" width="60" height="60"></a>
@@ -38,7 +76,7 @@
           </div>
         {% endif %}
 
-        <form class="row g-3 mt-3 bg-white rounded-5 text-secondary shadow p-4" action="{% url 'registro_admin' %}" method="post">
+        <form class=" g-3 mt-3 rounded-5 text-secondary shadow p-4" action="{% url 'registro_admin' %}" method="post">
             {% csrf_token %}
             <div class="col-6">
                 <label for="inputnombres" class="form-label">Nombres</label>
@@ -71,12 +109,12 @@
             </div>
 
             <div class="col-6">
-                <label for="inputdate">Fecha de nacimiento</label>
+                <label for="inputdate" class="label mt-1 mb-1">Fecha de nacimiento</label>
                 <input type="date" class="form-control" id="inputdate" name="txtnaci">
             </div>
 
             <div class="col-6">
-                <select class="form-select" id="tipo_usuario" name="tipo_usuario">
+                <select class="form-select mt-2" id="tipo_usuario" name="tipo_usuario">
                     <option value="admin">Administrador</option>
                     <option value="visitante" selected>Usuario Visitante</option>
                 </select>
@@ -95,11 +133,11 @@
             </div>
 
             <div class="col-12">
-                <button type="submit" class="btn btn-primary">Registrate</button>
+                <button type="submit" >Registrate</button>
             </div>
 
             <div class="col-12">
-                <button type="reset" class="btn btn-secondary">Limpiar</button>
+                <button type="reset" class="btn-secondary mt-1">Limpiar</button>
             </div>
 
             <div class="col-12"> 

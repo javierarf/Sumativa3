@@ -1,0 +1,173 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progra-Consolas</title>
+    <link rel="stylesheet" href="{% static 'css/estilo.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+</head>
+<body>
+    
+  <nav class="navbar navbar-expand-lg" id="navbar">
+    <div class="container-fluid">
+      <div class="col-4" id="logo">
+        <a href="{% url 'index' %}"><img src="{% static 'images/img1.png' %}" alt="" width="60" height="60"></a>
+      </div>
+        <a class="navbar-brand" href="{% url 'index' %}">Inicio</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'PlayStation' %}">PlayStation</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'Nintendo' %}">Nintendo</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'Microsoft' %}">Microsoft</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'Todos' %}">Todos</a>
+          </li>
+        </ul> 
+      </div>
+    </div>
+  </nav>
+
+  <div class="container-product">
+  <div class="row justify-content-center">
+    <div class="align-center">
+    <div class="col-6 mt-5"> 
+      <h1>PlayStation 5</h1>
+      <h2>Disco</h2>
+    </div>
+    <div class="logoPlaystation col-4 mt-5 mb-5">
+      <img src="{% static 'images/Ps5Disco.png' %}"  alt="Logo de Sony PlayStation" class="img-fluid" style="float: left; margin-left: 20px;">
+    </div>
+   </div>
+  </div>
+</div>
+    
+    <div class="container-imagen">
+      <div class="row">
+            <div class="col-1 col-md-4 mt-3">
+                <div class="d-flex justify-content-between">
+                <img src="{% static 'images/mandops5.png' %}" class="img-fluid" alt="...">
+                <img src="{% static 'images/ps5.png' %}" class="img-fluid" alt="...">
+                <img src="{% static 'images/ps-5.png' %}" class="img-fluid" alt="...">
+                </div>
+            </div>
+    </div>
+</div>
+    <div class="container mt-5">
+    <p>
+        <h3>  
+            Especificaciones:
+            <br>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim sequi voluptas facilis 
+            uasi cumque libero illum quo. Dolores atque assumenda quibusdam corporis iste dolorem 
+            u  nde commodi sed! Dignissimos, enim rerum.Lorem ipsum dolor sit amet consectetur 
+            adipisicing elit. Enim sequi voluptas facilis uasi cumque libero illum quo. Dolores 
+            atque assumenda quibusdam corporis iste dolorem u  nde commodi sed! Dignissimos, 
+            enim rerum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim sequi voluptas facilis 
+            uasi cumque libero illum quo. Dolores atque assumenda quibusdam corporis iste dolorem 
+            u  nde commodi sed! Dignissimos, enim rerum.Lorem ipsum dolor sit amet consectetur 
+            adipisicing elit. Enim sequi voluptas facilis uasi cumque libero illum quo. Dolores 
+            atque assumenda quibusdam corporis iste dolorem u  nde commodi sed! Dignissimos, 
+            enim rerum.
+        </h3>
+      </p>
+      <br>
+      <p>
+        <h3>
+            Características:
+            <br>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim sequi voluptas facilis 
+            uasi cumque libero illum quo. Dolores atque assumenda quibusdam corporis iste dolorem 
+            u  nde commodi sed! Dignissimos, enim rerum.Lorem ipsum dolor sit amet consectetur 
+            adipisicing elit. Enim sequi voluptas facilis uasi cumque libero illum quo. Dolores 
+            atque assumenda quibusdam corporis iste dolorem u  nde commodi sed! Dignissimos, 
+            enim rerum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim sequi voluptas facilis 
+            uasi cumque libero illum quo. Dolores atque assumenda quibusdam corporis iste dolorem 
+            u  nde commodi sed! Dignissimos, enim rerum.Lorem ipsum dolor sit amet consectetur 
+            adipisicing elit. Enim sequi voluptas facilis uasi cumque libero illum quo. Dolores 
+            atque assumenda quibusdam corporis iste dolorem u  nde commodi sed! Dignissimos, 
+            enim rerum.
+        </h3>
+        </h3>
+      </p>
+    </div>
+
+
+
+
+
+
+
+
+
+    <style>
+
+      @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap");
+      
+      #logo{
+          text-align: center;
+          color: black;
+      }
+      
+      #navbar{
+          background-color: rgb(2, 129, 112);
+      }
+      
+      .carousel-item img{
+          display: block;
+          margin: auto;
+          width: 100%; 
+          height: auto;
+          object-fit: cover;
+      }
+      
+      .container1{
+      text-align: left;
+      }
+      .container2{
+          text-align: center;
+      }
+      .container3{
+       text-align: right;   
+      }
+      .align-center {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+      
+        }
+        .carousel-item{
+          background-color: #000000a9 ;
+          width: 100%; 
+          height: auto;
+          object-fit: cover;
+        }
+        
+        .container-product{
+          background-color: black;
+        }
+        .imagenes{
+          background-color: rgba(0, 0, 0, 0.541);
+        }
+        .align-middle {
+          display: flex;
+          align-items: center;
+        }
+        .container-imagen{
+          background-color: rgba(0, 0, 0, 0.226);
+        }
+        .nav-item{
+          font-size: 1.5rem;
+        }
+      
+      </style>

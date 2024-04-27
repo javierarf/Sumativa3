@@ -1,0 +1,178 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progra-Consolas</title>
+    <link rel="stylesheet" href="{% static 'css/estilo.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+</head>
+<body>
+    
+  <nav class="navbar navbar-expand-lg" id="navbar">
+    <div class="container-fluid">
+      <div class="col-4" id="logo">
+        <a href="{% url 'index' %}"><img src="{% static 'images/img1.png' %}" alt="" width="60" height="60"></a>
+      </div>
+        <a class="navbar-brand" href="{% url 'index' %}">Inicio</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'PlayStation' %}">PlayStation</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'Nintendo' %}">Nintendo</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'Microsoft' %}">Microsoft</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'Todos' %}">Todos</a>
+          </li>
+        </ul> 
+      </div>
+    </div>
+  </nav>
+
+  <div class="container-product">
+  <div class="row justify-content-center">
+    <div class="align-center">
+    <div class="col-6 mt-5"> 
+      <h1>Nintendo Switch</h1>
+      <h2>OLED</h2>
+    </div>
+    <div class="logoPlaystation col-4 mt-5 mb-5">
+      <img src="{% static 'images/nintendo.png' %}"  alt="Nintendo Switch Oled" class="img-fluid" style="float: left; margin-left: 20px;">
+    </div>
+   </div>
+  </div>
+</div>
+    
+    <div class="container-imagen">
+      <div class="row">
+            <div class="col-1 col-md-3 mt-3">
+                <div class="d-flex justify-content-between">
+                <img src="{% static 'images/NintendoSwitchMandoWhite.png' %}" class="img-fluid" alt="..." style="max-width: 600px;">
+                <img src="{% static 'images/NintendoSwitchOLED2.png' %}" class="img-fluid" alt="..." style="width: 600px;">
+                <img src="{% static 'images/NIntendoSwitchOledCaja.png' %}" class="img-fluid" alt="...">
+                </div>
+            </div>
+    </div>
+</div>
+    <div class="container mt-5">
+    <p>
+         
+            <h1>Especificaciones:</h1>
+            <br>
+        <h3> 
+            -Pantalla: Pantalla táctil multi-touch OLED capacitiva de 7.0 pulgadas<br>
+            -Resolución de pantalla: 1280x720<br>
+            -CPU/GPU: Procesador NVIDIA Tegra personalizado<br>
+            -Almacenamiento: 64 GB<br>
+            -Batería interna: batería de iones de litio de 4310mAh<br>
+            -Duración de batería: entre 4.5 y 9 horas dependiendo del juego<br>
+            -Tiempo de carga: aproximadamente 3 horas<br>
+            -Salida de video: Hasta 1080p en modo televisor vía HDMI. Hasta 720p en modo portátil y sobremesa<br>
+            -Salida de audio: Salida 5.1ch PCM. Salida por HDMI en modo televisor<br>
+            -Bocinas: Estéreo<br>
+            -Conexión USB: USB tipo C<br>
+            -Conexión inalámbrica: Wi-Fi (IEEE 802.11 que cumple cona/b/g/n/a) / Bluetooth 4.1<br>
+            -Entrada de micrófono/audífono: 3.5 mm (estándar CTIA)<br>
+            -Entrada MicroSD: compatible con memorias microSD, microSDHC y microSDXC de hasta 2 TB<br>
+            -Sensores: acelerómetro, giroscopio y sensor de iluminación
+            
+        </h3>
+      </p>
+      <br>
+      <p>
+        
+            <h1>Características:</h1>
+            <br>
+        <h3>
+            ¡Te presentamos al nuevo miembro de la familia Nintendo Switch!<br><br>
+
+
+            Juega en casa o en el camino en una vibrante pantalla OLED de 7 pulgadas (17.78 cm) con la consola Nintendo Switch modelo OLED.
+            Además de la nueva pantalla, que ofrece colores brillantes y contrastes definidos, la consola Nintendo Switch modelo OLED incluye 
+            un soporte ajustable y amplio para encontrar el ángulo de vista perfecto, una base con puerto LAN para conexión por cable en el modo TV
+            (el cable LAN se vende por separado), 64 GB de almacenamiento interno y audio mejorado al usar los altavoces de la consola en 
+            los modos portátil y semiportátil.<br>
+            
+
+            
+        </h3>
+        </h3>
+      </p>
+    </div>
+
+
+
+
+
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap");
+
+#logo{
+    text-align: center;
+    color: black;
+}
+
+#navbar{
+    background-color: rgb(2, 129, 112);
+}
+
+.carousel-item img{
+    display: block;
+    margin: auto;
+    width: 100%; 
+    height: auto;
+    object-fit: cover;
+}
+
+.container1{
+text-align: left;
+}
+.container2{
+    text-align: center;
+}
+.container3{
+ text-align: right;   
+}
+.align-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+  .carousel-item{
+    background-color: #000000a9 ;
+    width: 100%; 
+    height: auto;
+    object-fit: cover;
+  }
+  
+  .container-product{
+    background-color: black;
+  }
+  .imagenes{
+    background-color: rgba(0, 0, 0, 0.541);
+  }
+  .align-middle {
+    display: flex;
+    align-items: center;
+  }
+  .container-imagen{
+    background-color: rgba(0, 0, 0, 0.226);
+  }
+  .nav-item{
+    font-size: 1.5rem;
+  }
+
+
+</style>
+
+    

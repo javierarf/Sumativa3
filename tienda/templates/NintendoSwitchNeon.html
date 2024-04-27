@@ -1,0 +1,197 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progra-Consolas</title>
+    <link rel="stylesheet" href="{% static 'css/estilo.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+</head>
+<body>
+    
+  <nav class="navbar navbar-expand-lg" id="navbar">
+    <div class="container-fluid">
+      <div class="col-4" id="logo">
+        <a href="{% url 'index' %}"><img src="{% static 'images/img1.png' %}" alt="" width="60" height="60"></a>
+      </div>
+        <a class="navbar-brand" href="{% url 'index' %}">Inicio</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'PlayStation' %}">PlayStation</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'Nintendo' %}">Nintendo</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'Microsoft' %}">Microsoft</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'Todos' %}">Todos</a>
+          </li>
+        </ul> 
+      </div>
+    </div>
+  </nav>
+
+  <div class="container-product">
+  <div class="row justify-content-center">
+    <div class="align-center">
+    <div class="col-6 mt-5"> 
+      <h1>Nintendo Switch</h1>
+      <h2>NEON</h2>
+    </div>
+    <div class="logoPlaystation col-4 mt-5 mb-5">
+      <img src="{% static 'images/NintendoSwichtConsola.png' %}"  alt="Nintendo Switch Neon" class="img-fluid" style="float: left; margin-left: 20px;">
+    </div>
+   </div>
+  </div>
+</div>
+    
+    <div class="container-imagen">
+      <div class="row">
+            <div class="col-1 col-md-3 mt-3">
+                <div class="d-flex justify-content-between">
+                <img src="{% static 'images/NintendoSwitchNeonMando.png' %}" class="img-fluid" alt="..." style="max-width:500px;">
+                <img src="{% static 'images/NintendoSwichtConsola.png' %}" class="img-fluid" alt="..." style="width: 500px;">
+                <img src="{% static 'images/NIntendoSwitchNeonCaja.png' %}" class="img-fluid" alt="...">
+                </div>
+            </div>
+    </div>
+</div>
+    <div class="container mt-5">
+    <p>
+         
+            <h1>Especificaciones:</h1>
+            <br>
+        <h3> 
+            -Pantalla: Táctil capacitiva / LCD 6,2"/ resolución de 1280x720p<br>
+            -CPU/GPU: Procesador Tegra NVIDIA<br>
+            -Memoria: 32 GB (6,2 GB están reservados para el sistema operativo)<br>
+            -Comunicación: LAN inalámbrico (compatible con IEEE 802.11 a/b/g/n/ac) / Bluetooth 4.1<br>
+            -Resolución máxima modo TV: 1920x1080, 60 fps<br>
+            -Resolución máxima modo portátil: 1280x720<br>
+            -Salida de audio: Compatible con PCM lineal 5.1<br>
+            -Altavoces: Estéreo<br>
+            -Puertos: Terminal USB Type-C<br>
+            -Compatibilidad: Tarjetas de juego de Nintendo Switch.<br>
+            -Tarjetas microSD compatibles: microSD, microSDHC y microSDXC (se requiere una actualización a través de internet para usar tarjetas de memoria microSDXC)<br>
+            -Sensores: Acelerómetro / giroscopio / sensor de brillo<br>
+            -Entorno operativo: Temperatura: 5 - 35°C / Humedad: 20 - 80%<br>
+            -Batería interna: Batería de ion de litio<br>
+            -Capacidad de la batería 4310mAh<br>
+            -Duración de la batería: De 4,5 a 9 horas aproximadamente.<br>
+            -Tiempo de carga: 3h aproximadamente<br><br>
+            -Contenido:<br>
+            -Consola Nintendo Switch<br>
+            -Joy-Con (L)<br>
+            -Joy-Con (R)<br>
+            -Base de Nintendo Switch<br>
+            -Soporte para mandos Joy-Con<br>
+            -Adaptador de corriente de Nintendo Switch<br>
+            -Correas de los mandos<br>
+            
+        </h3>
+      </p>
+      <br>
+      <p>
+        
+            <h1>Características:</h1>
+            <br>
+        <h3>
+            Consola Nintendo Switch Neón/Rojo Neón<br><br>
+
+
+            Alguna vez has dejado un juego por falta de tiempo? La consola Nintendo Switch  puede transformarse para adaptarse a tu situación,
+             de modo que puedes jugar a los juegos que tú quieras por muy ocupado que estés. Es una nueva era en la que no tienes que adaptar 
+             tu vida a los videojuegos: ahora es la consola la que se adapta a tu vida. Disfruta de tus juegos cuando quieras, donde quieras y 
+             como quieras con modos de juego flexibles.<br>
+
+            En esta nueva versión Nintendo Switch cuenta con las mismas prestaciones que Nintendo Switch 2017, salvo con una pequeña modificación 
+            en la fabricación del procesador para mejorar su eficiencia, y por lo tanto mejorar la autonomía de la batería en esta versión que llega 
+            a ser de 4.5 a 9 horas.<br><br>
+
+            3 Modos de juego<br><br>
+            Modo Televisor: Reúne a todos ante una pantalla y disfruta del juego en compañía. Conecta la consola al televisor y todos lo pasarán en grande, 
+            niños y mayores. Es una forma estupenda de incluir a toda la casa, familia y amigos, en el juego.<br><br>
+            Modo Sobremesa: Comparte la pantalla, comparte la diversión. Si no tienes acceso a un televisor, abre el soporte de la consola y 
+            pásale un Joy-Con a un amigo para jugar partidas cooperativas o competitivas en la misma pantalla de la consola.<br><br>
+            Modo Portátil: Lleva contigo una espléndida pantalla allá donde vayas. Disfruta de la misma experiencia de juego que en el televisor, 
+            pero en tus manos. Déjate envolver en juegos a los que nunca pensaste que podrías jugar fuera de casa, cuando quieras y como quieras.
+            
+
+            
+        </h3>
+        </h3>
+      </p>
+    </div>
+
+
+
+
+
+    <style>
+
+      @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap");
+      
+      #logo{
+          text-align: center;
+          color: black;
+      }
+      
+      #navbar{
+          background-color: rgb(2, 129, 112);
+      }
+      
+      .carousel-item img{
+          display: block;
+          margin: auto;
+          width: 100%; 
+          height: auto;
+          object-fit: cover;
+      }
+      
+      .container1{
+      text-align: left;
+      }
+      .container2{
+          text-align: center;
+      }
+      .container3{
+       text-align: right;   
+      }
+      .align-center {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+      
+        }
+        .carousel-item{
+          background-color: #000000a9 ;
+          width: 100%; 
+          height: auto;
+          object-fit: cover;
+        }
+        
+        .container-product{
+          background-color: black;
+        }
+        .imagenes{
+          background-color: rgba(0, 0, 0, 0.541);
+        }
+        .align-middle {
+          display: flex;
+          align-items: center;
+        }
+        .container-imagen{
+          background-color: rgba(0, 0, 0, 0.226);
+        }
+        .nav-item{
+          font-size: 1.5rem;
+        }
+      
+      </style>

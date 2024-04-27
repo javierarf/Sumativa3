@@ -81,7 +81,7 @@ DATABASES = {
 
         'ENGINE': 'django.db.backends.oracle',
 
-        'NAME': 'orcl',  # Solo el nombre de la base de datos
+        'NAME': 'orclbd',  # Solo el nombre de la base de datos
 
         'USER': 'tienda_juegos',
 

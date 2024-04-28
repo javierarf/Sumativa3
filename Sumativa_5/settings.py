@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'tienda',
     'rest_framework',
     'rest_api',
+    'rest_framework.authtoken'
 ]
 
 MIDDLEWARE = [
@@ -83,7 +84,7 @@ DATABASES = {
 
         'ENGINE': 'django.db.backends.oracle',
 
-        'NAME': 'orcl',  # Solo el nombre de la base de datos
+        'NAME': 'orclbd',  # Solo el nombre de la base de datos
 
         'USER': 'tienda_juegos',
 
@@ -108,6 +109,12 @@ DATABASES = {
 }
 
 
+REST_FRAMEWORK={
+    'DEFAULT_AUTHENTICATION_CLASSES':[
+        'rest_framework.authentication.TokenAuthentication',
+    ]
+    
+}
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
 

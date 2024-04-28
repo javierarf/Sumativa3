@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect , get_object_or_404
 from tienda.models import Usuario , Consola , Marca_Consola
 from .forms import formLog , EditarPerfilForm , ConfirmarBorradoForm , ConsolaForm , VerificacionForm ,ModificarPerfilForm , CambiarContrasenaForm , RecuperarContraseñaForm
 from django.contrib import messages
+import requests
 
 # Create your views here.
 
@@ -419,3 +420,19 @@ def Todos(request):
 def detalle_consola(request, consola_id):
     consola = get_object_or_404(Consola, id=consola_id)
     return render(request, 'detalle_consola.html', {'consola': consola})
+
+
+def lista_juegos(request):
+    url = 'https://www.freetogame.com/api/games'
+    response = requests.get(url)
+
+    juegos = response.json()
+
+    context = {
+        'juegos' : juegos
+    }
+
+    return render(request,'juegos.html', context)
+
+def API_Figuras(request):
+    return render(request, 'API_Figuras.html' )

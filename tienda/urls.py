@@ -1,10 +1,10 @@
 from django.urls import path 
-from .views import principal  ,Microsoft , webLogin , Nintendo ,NintendoSwichtOled , NintendoSwitchLite , NintendoSwitchNeon , PlayStation , PS5 , PS5Slim , PS5SlimDig , Todos , XboxSeriesSBlack , XboxSeriesSWhite , XboxSeriesX , RegistrarUsuario ,  modificar_perfil , guardar_cambios ,modificar_contrasena , guardar_cambios_contrasena ,borrar_perfil ,confirmar_borrar_perfil ,agregar_consola ,ver_consolas ,home_admin , borrar_consola , editar_consola ,recuperar_contraseña , RegistrarUsuarioAdmin , detalle_consola
+from .views import API_Figuras, lista_juegos, principal  ,Microsoft , webLogin , Nintendo ,NintendoSwichtOled , NintendoSwitchLite , NintendoSwitchNeon , PlayStation , PS5 , PS5Slim , PS5SlimDig , Todos , XboxSeriesSBlack , XboxSeriesSWhite , XboxSeriesX , RegistrarUsuario ,  modificar_perfil , guardar_cambios ,modificar_contrasena , guardar_cambios_contrasena ,borrar_perfil ,confirmar_borrar_perfil ,agregar_consola ,ver_consolas ,home_admin , borrar_consola , editar_consola ,recuperar_contraseña , RegistrarUsuarioAdmin , detalle_consola
 
 urlpatterns = [
-    path('principal', principal , name="index"),
+    path('principal/', principal , name="index"),
     path('', webLogin , name= 'Iniciar_Sesion'),
-    path('principal/Microsoft' , Microsoft , name='Microsoft'),
+    path('principal/Microsoft/' , Microsoft , name='Microsoft'),
     path('principal/Nintendo' , Nintendo , name='Nintendo'),
     path('principal/NintendoSwichtOled' , NintendoSwichtOled , name='NintendoSwichtOled'),
     path('principal/NintendoSwitchLite' , NintendoSwitchLite , name='NintendoSwitchLite'),
@@ -21,15 +21,17 @@ urlpatterns = [
     path('modificarperfil/', modificar_perfil, name='modificar_perfil'),
     path('guardarcambios/', guardar_cambios, name='guardar_cambios'),
     path('modificarcontraseña/' , modificar_contrasena , name='modificar_contraseña'),
-     path('guardar_cambios_contrasena/', guardar_cambios_contrasena, name='guardar_cambios_contrasena'),
-     path('borrarperfil/', borrar_perfil, name='borrar_perfil'),
-     path('confirmareliminacion/', confirmar_borrar_perfil, name='confirmar_borrar_perfil'),
+    path('guardar_cambios_contrasena/', guardar_cambios_contrasena, name='guardar_cambios_contrasena'),
+    path('borrarperfil/', borrar_perfil, name='borrar_perfil'),
+    path('confirmareliminacion/', confirmar_borrar_perfil, name='confirmar_borrar_perfil'),
     path('agregar_consola' , agregar_consola , name='agregar_consola'),
-    path('ver_consolas', ver_consolas, name='ver_consolas'),
-    path('home_admin' , home_admin , name='home_admin'),
+    path('ver_consolas/', ver_consolas, name='ver_consolas'),
+    path('home_admin/' , home_admin , name='home_admin'),
     path('borrar_consola/<int:consola_id>/', borrar_consola, name='borrar_consola'),
     path('editar_consola/<int:consola_id>/', editar_consola, name='editar_consola'),
     path('recuperar_contraseña' , recuperar_contraseña , name='recuperar_contraseña'),
     path('registro/admin/', RegistrarUsuarioAdmin, name='registro_admin'),
-     path('detalle_consola/<int:consola_id>/', detalle_consola, name='detalle_consola'),
+    path('detalle_consola/<int:consola_id>/', detalle_consola, name='detalle_consola'),
+    path('principal/juegos' , lista_juegos , name='juegos'),
+    path('principal/API_Figuras', API_Figuras, name='API_Figuras'),
 ]

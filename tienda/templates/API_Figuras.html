@@ -7,6 +7,8 @@
     <title>Progra-Consolas</title>
     <link rel="stylesheet" href="{% static 'css/estilo.css' %}">
     <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     
 </head>
@@ -38,9 +40,10 @@
                 <li class="nav-item">
                   <a class="nav-link" href="{% url 'API_Figuras' %}">Figuras de Accion</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="{% url 'juegos' %}">Videojuegos</a>
-            </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'juegos' %}">Videojuegos</a>
+              </li>
+               
             </ul>
             <ul class="navbar-nav">
                 <li class="nav-item">
@@ -55,6 +58,8 @@
       <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
       <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
       <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
     </div>
     <div class="carousel-inner">
       <div class="carousel-item active">
@@ -68,6 +73,14 @@
       <div class="carousel-item">
         <p><h3 style="text-align: center;">¡ Nueva Nintendo Swicht Oled !</h3></p>
         <img src="{% static 'images/NintendoSwichtConsola.png' %}" class="d-block" style="max-width: 400px; height: auto;" alt="slide-3">
+      </div>
+      <div class="carousel-item">
+        <p><h3 style="text-align: center;">¡ Nuestras Figuras de Accion !</h3></p>
+        <img src="{% static 'images/MARIO_JPG.png' %}" class="d-block" style="max-width: 240px; height: auto;" alt="slide-4">
+      </div>
+      <div class="carousel-item">
+        <p><h3 style="text-align: center;">¡ Videojuegos !</h3></p>
+        <img src="{% static 'images/Videojuego.png' %}" class="d-block" style="max-width: 608px; height: auto;" alt="slide-5">
       </div>
     </div>
       <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -84,72 +97,60 @@
   <header class="header">
         <div class="header-content container mt-4" >
           <div class="header-txt">
-              <span>Bienvenidos a nuestra tienda!</span>
-              <h1>Nuestras Marcas:</h1>
-              <div class="row">
-                <div class="col-8 mt-3"> 
-                  <h2>Sony PlayStation</h2>
-                  <p>
-                    <h3>  
-                      PlayStation es el nombre de una serie de consolas de videojuegos creadas y desarrolladas por Sony Interactive Entertainment.                         
-                      Han estado presentes en la quinta, sexta, séptima, octava y novena generación de videoconsolas; 
-                      la compañía promotora está actualmente en el mercado con su PlayStation 5.
-                    </h3>
-                  </p>
-                </div>
-                <div class="logoPlaystation col-2 mt-5">
-                  <img src="{% static 'images/PlayStationLogo.png' %}"  alt="Logo de Sony PlayStation" class="img-fluid" style="float: left; margin-left: 100px;">
-                </div>
-              </div>
-          </div>
-            <div class="consolaPlayStationImg col-4">
-              <img src="{% static 'images/consolaPS5.png' %}" class="img-fluid" alt="Imagen Ps5" ></a>
-            </div>
-            <div class="row">
-              <div class="col-8 mt-3"> 
-                <h2>Nintendo Company</h2>
-                <p>
-                  <h3>
-                    Nintendo Company, Ltd.es una empresa de entretenimiento dedicada a la investigación, 
-                    desarrollo y distribución de software y hardware de videojuegos, y juegos de cartas, con sede en Kioto, Japón.
-                    Sus productos incluyen algunas de las consolas y títulos más influyentes y exitosos en la industria de los videojuegos, 
-                    como la Nintendo Entertainment System, la Super Nintendo Entertainment System, la Wii y la Game Boy; así como los juegos Donkey Kong (1981), 
-                    Super Mario Bros. (1985), The Legend of Zelda (1986), Metroid (1986), Fire Emblem (1990), Star Fox (1993) y Pokémon Red y Blue (1996), 
-                    que dieron origen a sus correspondientes franquicias.
-                  </h3>
-                </p>
-              </div>
-                <div class="logoNintendo col-3 mt-5">
-                  <img src="{% static 'images/NintendoLogo.png' %}" alt="Logo de Sony PlayStation" class="img-fluid" style="float: left; margin-left: 100px; margin-top:90px;">
-                </div>
-            </div>
-            <div class="consolaNintendoSwicht col-6">
-              <img src="{% static 'images/NintendoSwichtConsola.png' %}" class="img-fluid" alt="Imagen Nintendo Swicht"></a>
-            </div>
-            <div class="row">
-              <div class="col-8 mt-3"> 
-                <h2>Microsoft</h2>
-                <p>
-                  <h3>
-                    Xbox es una marca de videojuegos creada por y propiedad de Microsoft que incluye una serie de videoconsolas desarrolladas por la misma compañía, 
-                    de sexta a novena generación, así como aplicaciones (juegos), servicios de streaming y el servicio en línea Xbox Live. La marca fue introducida 
-                    por primera vez el 8 de noviembre de 2001 en los Estados Unidos, con el lanzamiento de la consola Xbox.
-                    El 10 de noviembre de 2020 Microsoft lanza sus más recientes consolas, la Xbox Series X/S, que ha vendido más de 16 millones de consolas hasta la fecha.
-                  </h3>
-                </p>
-              </div>
-              <div class="logoXbox col-3 mt-5">
-                <img src="{% static 'images/XboxLogo.png' %}" alt="Logo de Sony PlayStation" class="img-fluid" style="float: left; margin-left: 100px; margin-top:90px;">
-              </div>
-            </div>
-            <div class="consolaXbox col-6">
-              <img src="{% static 'images/XboxSerieX.png' %}" class="img-fluid" alt="Imagen Nintendo Swicht"></a>
-            </div>
+              <span>Bienvenidos a nuestra tienda !</span>
+              <br>
+              <br>
+              <h1>Nuestras Figuras de Accion Amiibo</h1>       
+          </div>           
         </div>
   </header>
+  <div class=" container mt-5">
+    <h2>Listado de Personajes</h2>
+    <div  class="row" id="personajes"></div>
+  </div>
+  <script>
+      $(document).ready(function(){
+      const URL = "https://amiiboapi.com/api/amiibo/?type=Figure";
+      var id_personajes = $("#personajes");
+      
+    
+
+
+      function addPersonaje(personaje){
+        id_personajes.append(
+          `
+          <div class = "col-md-3" style="margin-bottom: 50px;">
+            <div class = "card" style = "width: 18rem;display: flex; flex-direction: column; align-items: center; justify-content: center;">
+              <img src = " ${personaje.image}" class = "card-img-top"  height: auto;" alt = "" style="width: 60%; height: 200px; display: block; ">
+              <div class="card-body">
+                      <h5 class = "card-title">${personaje.character}</h5>
+                      <p class = "card-text">Videojuego :${personaje.gameSeries}</p>
+                  </div>
+              </div>
+          </div>
+          `
+
+
+        )
+      }
+      function obtenerPersonajes(){
+        $.ajax({
+          url: URL,
+          method: "GET",
+          success: function (data){
+            console.log(data.amiibo);
+            var personajes = data.amiibo;
+            personajes.forEach(addPersonaje);
+          }
+        })
+      }
+      obtenerPersonajes();
+   });
+   
+  </script>
+  </div>
 </body>
 </html>
-
 
 <style>
 
@@ -212,10 +213,3 @@ text-align: left;
   }
 
 </style>
-
-
-
-
-
-
-        

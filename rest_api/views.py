@@ -1,14 +1,17 @@
 from django.shortcuts import render
 from rest_framework.response import Response
-from rest_framework.decorators import api_view
+from rest_framework.decorators import api_view, permission_classes
 from django.views.decorators.csrf import csrf_exempt
 from rest_framework.parsers import JSONParser
 from rest_framework import status
 from tienda.models import Usuario, Consola
 from .serializers import UsuarioSerializer, ConsolaSerializer
+from rest_framework.authentication import TokenAuthentication
+from rest_framework.permissions import IsAuthenticated
 # Create your views here.
 @csrf_exempt
 @api_view(['GET'])
+@permission_classes((IsAuthenticated,))
 def lista_usuarios(request):
     if request.method== 'GET':
         usuarios = Usuario.objects.all()
@@ -19,6 +22,7 @@ def lista_usuarios(request):
 
 @csrf_exempt
 @api_view(['GET' , 'POST'])
+@permission_classes((IsAuthenticated,))
 def lista_consolas(request):
     if request.method== 'GET':
         consolas = Consola.objects.all()
@@ -38,7 +42,8 @@ def lista_consolas(request):
         
 
 @csrf_exempt
-@api_view(['GET' , 'PUT' , 'PATCH' , 'DELETE'])      
+@api_view(['GET' , 'PUT' , 'PATCH' , 'DELETE']) 
+@permission_classes((IsAuthenticated,))     
 def vista_consola(request , id):  
 
     try:
